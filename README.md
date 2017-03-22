@@ -46,6 +46,7 @@ You just need to set it once, and provide it in each OAuth requests thanks to a 
 ## Step 4 (Optionnal) : Override the default Spring Oauth2 config
 
 Once you have completed the step 3, you are all done ! Spring Boot will handle all the boilerplate config for you and use the config provided in the `application.yml`.
+
 See http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-security.html for more informations about the way Spring Boot autoconfigures the security layer.
 
 ### OAuth2 Authorization config
