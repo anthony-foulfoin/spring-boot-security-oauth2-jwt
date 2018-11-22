@@ -1,4 +1,4 @@
-# Spring Boot Security OAuth2 JWT example
+# Spring Boot Security OAuth2 JWT example (Spring Boot 1.5.x)
 
 This project provides an example of how to use a JWT token to secure a Spring Boot application.
 There are a lot of examples available on github for doing this, but most of them weren't fully satisfying for several reasons:
