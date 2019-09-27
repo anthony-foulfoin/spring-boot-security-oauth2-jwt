@@ -103,7 +103,7 @@ The access_token is your jwt token. It contains your user informations.
 
 Use this access token in an **Authorization** header to query a secured endpoint. Note that you do not need to provide the client OAuth2 API key anymore (**myClient:myClientSecret**).
 ```sh
-$ curl -H "Authorization: Bearer abcdef" localhost:8080/
+$ curl -H "Authorization: Bearer abcdefg" localhost:8080/
 ```
 
 Result :
