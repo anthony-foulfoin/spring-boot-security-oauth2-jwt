@@ -6,6 +6,7 @@ security:
       authorized-grant-types: authorization_code,refresh_token,password
       scope: openid
     resource.jwt:
-      key-pair:
-        alias: mytestkey
-        store-password: mystorepass
+      key-store: keystore.jks
+      key-store-password: mystorepass
+      key-alias: mytestkey
+

@@ -16,10 +16,13 @@ import java.security.KeyPair;
 @EnableAuthorizationServer
 public class OAuth2AuthorizationConfig  {
 
-  @Value("${security.oauth2.resource.jwt.key-pair.store-password}")
+  @Value("${security.oauth2.resource.jwt.key-store}")
+  private String keyStorePath;
+
+  @Value("${security.oauth2.resource.jwt.key-store-password}")
   private String keyStorePass;
 
-  @Value("${security.oauth2.resource.jwt.key-pair.alias}")
+  @Value("${security.oauth2.resource.jwt.key-alias}")
   private String keyPairAlias;
 
   /**
@@ -33,9 +36,8 @@ public class OAuth2AuthorizationConfig  {
   @Bean
   public JwtAccessTokenConverter jwtAccessTokenConverter() {
     JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-    KeyPair keyPair = new KeyStoreKeyFactory(new ClassPathResource("keystore.jks"), keyStorePass.toCharArray()).getKeyPair(keyPairAlias);
+    KeyPair keyPair = new KeyStoreKeyFactory(new ClassPathResource(keyStorePath), keyStorePass.toCharArray()).getKeyPair(keyPairAlias);
     converter.setKeyPair(keyPair);
     return converter;
   }
-
 }
