@@ -1,4 +1,4 @@
-# Spring Boot Security OAuth2 JWT example (Spring Boot 1.5.x)
+# Spring Boot Security OAuth2 JWT example (Spring Boot 2.x)
 
 This project provides an example of how to use a JWT token to secure a Spring Boot application.
 There are a lot of examples available on github for doing this, but most of them weren't fully satisfying for several reasons:
@@ -26,9 +26,9 @@ This file contains your public and your private RSA keys. Keep this file **priva
 Update the file `application.yml` to set your keystore password and your key alias
 
 ```yml
-key-pair:
-  alias: mytestkey
-  store-password: mystorepass
+resource.jwt:
+  key-store-password: mystorepass
+  key-alias: mytestkey
 ```
 
 ## Step 3: Customize the Oauth client informations
